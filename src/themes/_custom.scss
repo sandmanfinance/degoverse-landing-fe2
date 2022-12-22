@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css?family=Bungee&display=swap");
+@import url("https://rsms.me/inter/inter.css");
+
+@font-face {
+  font-family: "Graphik Arabic Medium";
+  src: local("Qatar2022Arabic Bold"), url("../fonts/Graphik-Arabic-Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Qatar2022Arabic Bold";
+  src: local("Qatar2022Arabic Bold"), url("../fonts/Qatar2022Arabic-Bold.ttf") format("truetype");
+  font-weight: bold;
+}  
+
+.has-text-muted {
+  color: $grey-lighter;
+}
+
+.hero.is-fullheight {
+  min-height: var(--app-height);
+  overflow: hidden;
+}
+
+.hero-ball {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: var(--app-height);
+  height: var(--app-height);
+  background-position: right center;
+  background-size: cover;
+  z-index: 0;
+  left: -50%;
+}
+
+@include from($tablet) {
+  .mx-6-tablet {
+    margin-left: 3rem !important;
+    margin-right: 3rem !important;
+  }
+}
+
+@include from($desktop) {
+  .hero-ball {
+    left: -45%;
+  }
+  .hero-box {
+    background-color: rgba($primary, 0.25);
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+}
+
+@include from($widescreen) {
+  .hero-ball {
+    left: -30%;
+  }
+}
+
+.matic-news {
+  color: #7e22ce;
+}
